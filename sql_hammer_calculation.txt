@@ -1,0 +1,7 @@
+-- hammer calculation
+SELECT *,
+  CASE 
+    WHEN (open - low) > 2 * (close - open) AND (close - high) < (close - open) THEN 'Hammer'
+    ELSE 'Not a Hammer'
+  END AS hammer_pattern
+FROM pt_data.price_history;

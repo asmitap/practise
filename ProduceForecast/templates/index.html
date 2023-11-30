@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<Html>
+    <head>
+        <title>Index Page</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    </head>
+    <body>
+
+        <div>
+            <div class="col-sm-3 col-md-3"></div>
+            <div class="col-sm-3 col-md-3">
+
+                <h1 style="text-align:center">Web scraping</h1>
+                <form method="POST" action="">
+                    {% csrf_token %}
+                    <br>
+                    <div class="form-floating mb-3">
+                        <label for="inputdate">Start Date</label>
+                        <input type="date" class="form-control" id="startdate" name="startdate" placeholder="startdate">
+                    </div><br>
+                    <div class="form-floating">
+                        <label for="enddate">End Date</label>
+                        <input type="date" class="form-control" id="enddate" name="enddate" placeholder="end date"> 
+                    </div><br>
+                    <button type="submit" class="form-control">Scrap</button>
+                </form>
+
+            </div>
+            <div class="col-sm-3 col-md-3"></div>
+        </div>
+
+        
+
+    </body>
+</Html>
